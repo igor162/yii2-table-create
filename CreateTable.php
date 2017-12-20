@@ -98,9 +98,7 @@ HTML;
         foreach ($TBodyCell as $n => $item) {
 
             $tr = ArrayHelper::getValue($item, 'tr', []);
-            if (empty($tr)) {
-                throw new InvalidConfigException("The 'tr' option is required.");
-            }
+            if (empty($tr)) { $tr = $item; }
 
             $trData = [];
 
